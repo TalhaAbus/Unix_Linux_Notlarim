@@ -36,8 +36,8 @@
 **Neden linux sistemleri daha çok komut satırından kullanılıyor?**
 
 - Serverlara uzaktan erişilebildiği için genellikle bir grafik rayüzü içermiyorlar. Grafik arayüzü sistemi yavaşlatmaması açısından install edilmityor.
-- 
 
+1.48
 
 
 
