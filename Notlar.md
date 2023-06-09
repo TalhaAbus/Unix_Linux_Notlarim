@@ -37,7 +37,12 @@
 
 - Serverlara uzaktan erişilebildiği için genellikle bir grafik rayüzü içermiyorlar. Grafik arayüzü sistemi yavaşlatmaması açısından install edilmityor.
 
-1.48
+**64 bit işletim sistemi ne demek?**
+- 64 bit bir intel işlemci aynı zamanda 32 bit bir intel işlemci gibi de çalıkşabiliyor.
+- 32 bit bir işletim sisteminde processor ün 32 bir olduğu varsayılarak işletim sistemi yazılıyor. İşletim sisteminin tüm kernel ı 32 bit bir işlemci varmış gibi yazılmış. Halbuki 64 bit bir işlemcinin tek hamlede 64 bit bir işlemi yapabilmesinden kaynaklanan avantajları var.
+- Yani 32 bit bir kernel da her şey 32 bit işlemci olduğu varsayımıyla yazıldığı için  64 bit bir işletim sistemine göre daha yavaş çalışması beklenir. 
+- 32 bit bir işletim sisteminde bu processorlerde 4 gb ram kullnaılabiliyor. 64 bit ise 16 hekzabyte kadar. 
+- Yani 32 bit işletim sistemi, kernel içnde 32 bit processorler dikakte alınarak 32 bit işlemler yapacak şekilde, 32 bit C compiler ile compile edilmiş. Ve diğer 64 bit C compiler ile 64 bit işlemler yapabilecek şekilde compile edilmiş. Aynı zamanda 64 bit işeletim sistemleri 64 bi işlemcinin sağladığı birçok avantajları kullnaabilme yeteneğine de sahip. 
 
 
 
