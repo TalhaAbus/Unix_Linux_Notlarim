@@ -65,9 +65,9 @@
 
 - Kernel içerisinde sadece interface oluşturan bu fonksiyonlar yok. Bunlar dış dünya ile interface oluşturan sistem fonksiyonları. Bunun yanında driver için interface oluşturan fonksiyonlar da var. Yani driver yazanların daha dip katmanlarda  kullanabileceği fonksiyon grubu da var. Bunlara export edilmiş kernel fonksiyonları deniliyor.
 
+**GNU Komut satırı argümanları:**
 
-
-
+- İşletim sistemi komut satırı argümanlarının toplaytıp main fonksiyonuna parametre olarak geçiyor. 
 
 
 
