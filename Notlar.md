@@ -43,15 +43,27 @@
 - Yani 32 bit bir kernel da her şey 32 bit işlemci olduğu varsayımıyla yazıldığı için  64 bit bir işletim sistemine göre daha yavaş çalışması beklenir. 
 - 32 bit bir işletim sisteminde bu processorlerde 4 gb ram kullnaılabiliyor. 64 bit ise 16 hekzabyte kadar. 
 - Yani 32 bit işletim sistemi, kernel içnde 32 bit processorler dikakte alınarak 32 bit işlemler yapacak şekilde, 32 bit C compiler ile compile edilmiş. Ve diğer 64 bit C compiler ile 64 bit işlemler yapabilecek şekilde compile edilmiş. Aynı zamanda 64 bit işeletim sistemleri 64 bi işlemcinin sağladığı birçok avantajları kullnaabilme yeteneğine de sahip. 
+- Biz kodu 32 veya 64 bit olarak derleyebiliriz. 32 bit derleme yaparsak biz sanki 32 bit işlemci kullanıyormuşuz gibi bir makine dili üretiyor.
 
+**POSIX katmanına neden gerek var?**
+- Posix katmanı olmasaydı ya ben işletim sisteminin sistem fonksiyonlarını çağırmak zorunda kalırdım ya da standart C fonksiyonları ile idare etmek zorunda kalırdım. Standart C fonksiyonları yetersiz çünkü en büyük ortab bölem biçiminde. Sistem fonksiyonları da portable değil, her işletim sisteminin sistem fonksiyonları farklı olabiliyor.  O zaman UNİX türevi işletim sistemlerini temsil eden oradaki mantığa göre düzenlenmiş ayrı bir portable katmana ihtiyaç var. 
+**Bir POSIX fonksiyonu çağırıldığında, her zaman bir sistem fonksiyonlarını mı çağırıyor?**
+- Bazı POSIX fonksiyonları hiçbir sistem fonksiyonunu çağırmıyor. Bazısı ise doğrudan sistem fonksiyonlarını çağırıyor. Bazısı ise birden fazla sistem fonksiyonunu çağırıyor olabilir.
 
+**C'de ben dosyayı fopen fonksiyonu ile açıyorum. Dosyayı gerçekten ben açmıyor muyum?**
+- Dosya işlemleri, karmaşık kernel işlemlerini gerektiriyor. Dosya işlemlerinin hepsi user mode'da yapılamayacak, kernel tarafından yapılabilecek işlemler. Dosyalar en sonunda işletim sisteminin sistem fonksiyonu çağırılarak açılır.
+- Mesela fopen kodlarında bir takım işlemlerden sonra "open" POSIX fonksiyonunun çapırıldığını göreceksiniz. Open POSIX fonksiyonunu kodlarına bakınca da hemen sysopen sistem fonksiyonunun çağırılıdğını göreceksiniz.
 
+**İşletim sisteminin tüm faaliyetleri sistem fonksiyonları tarafından mı yürütülüyor?**
+- Hayır, işletim sistemminin pek çok faaliyeti var. Sistem fonksiyonları sadece dış dünyadan işletim sistemine iş yaptırabilmek için  kullanılan bir arayüz. Yani işletim sistemi = sistem fonksiyonları demek değildir.
+- Ve işletim sistemine bir iş yaptırılacaksa bunu yaptırabileceğimiz en düşük seviye sistem fonksqiyonlarını çağırmak olabilir.
+- Eğer kernel mode'a geçmiyorsak, driver yazmıyorsak çalışılabilrcek en alt seviye sistem fonksiyonlarını çağırmaktır. Daha aşağıya geçtiğimiz an kendimizi kernel içinde buluruz. Yani kernel'a en çok yaklaştığımız yer sistem fonksiyonlarını çağırdığımız zamandır.
 
+**Device Driverlar**
+- Kernel içne eklenmiş kodlar olarak düşünülebilir. Nasıl bir bilgisayarın içine bir bilgisayar kartı alıp desktop bilgisayarkların genişleme yuvasına kart takılıyorsa, kernel'a kart takmanın yazılımsal karşılığı da driver. Dolayısıyla bir driver yazdığımız aman o artık kernel ile aynı ddüzeyde çalışıyor. 
+- Sistem fonksiyonları da kernel içerisnideki fonksiyonları tetikliyor, driver fonksiyonlarını da çağıorabiliyor. Yapı olarak her iki yodlan da kernel içindeki kod çalışıyor. 
 
-
-
-
-
+- Kernel içerisinde sadece interface oluşturan bu fonksiyonlar yok. Bunlar dış dünya ile interface oluşturan sistem fonksiyonları. Bunun yanında driver için interface oluşturan fonksiyonlar da var. Yani driver yazanların daha dip katmanlarda  kullanabileceği fonksiyon grubu da var. Bunlara export edilmiş kernel fonksiyonları deniliyor.
 
 
 
