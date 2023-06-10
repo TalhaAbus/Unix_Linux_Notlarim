@@ -117,6 +117,22 @@ ders 6 , 1.15 == şifreleme
 **cat isim | grep Güvenlik
 - isim dosyasındaki güvenlik kelimesi geçen satırı yazdırdık. grep komutu.
 - Burada Pipe ( | ), bir çıktıyı başka bir komut ile bağladı.
+**touch ilk**
+- ilk isminde bir dosya oluşturduk.
+**rm ilk**
+- İlk isimli dosyayı sildik.
+**mkdir folder**
+- Folder isminde bir klasör oluşturuk.
+**rmdir folder**
+- Folder klasörünü sildik.
+**ls**
+- Dosyları listeledik.
+**mv ilk Desktop/**
+- ilk isimli dosyası Desktop klasörüne taşıdık.
+**mv dizilim documents**
+- dizilim isimli dosyanın ismini documents ile değiştirdi.
+- 
+
 
 
 
