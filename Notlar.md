@@ -114,6 +114,10 @@ ders 6 , 1.15 == şifreleme
 - Bos dosyasının içeriğini Dolu dosyasına yazdı.
 **echo ali >> Bos
 - Çift yönlendirme ile var olanın üzerine değil de devamına yazırdık.
+**cat isim | grep Güvenlik
+- isim dosyasındaki güvenlik kelimesi geçen satırı yazdırdık. grep komutu.
+- Burada Pipe ( | ), bir çıktıyı başka bir komut ile bağladı.
+
 
 
 
