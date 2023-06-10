@@ -89,6 +89,8 @@
 1. Gerçek GrupID
 2. Efektif GrupID
 
+ders 6 , 1.15 == şifreleme
+
 
 
 
