@@ -94,6 +94,26 @@ ders 6 , 1.15 == şifreleme
 7 - 2.38
 
 
+**echo $SHELL**
+- shell in bulunduğu konumu verdi
+**echo $BASH_VERSION
+- shell version
+**$SHELL --version**
+- shell version
+**echo TalhaAbus > Bos
+- Bos isimli bir belgeye yazı yazdırdık, yönlendirme ile.
+**cat Bos**
+- Bos isimli belgeyi terminale yazdık.
+**cat Bos Dolu**
+- İki belgeyi birden yazdırdık
+**man cat**
+- cat komutu ile alakalı yardım bilgilerini yazdırdık.
+**cat -n Bos**
+- Bos dosyasının içeriğini yazdırır ve numaralandırır.
+**cat -n Bos > Dolu
+- Bos dosyasının içeriğini Dolu dosyasına yazdı.
+**echo ali >> Bos
+- Çift yönlendirme ile var olanın üzerine değil de devamına yazırdık.
 
 
 
