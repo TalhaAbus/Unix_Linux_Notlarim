@@ -79,7 +79,17 @@
 
 **Process ID değeri programcı için en anlam ifade ediyor?**
 - Sistem programcısı process ID değeri ile ilerideki konualr bağlamında bunun kullanmak zorunda kalıyor. Ama kernel için process ID değerinin ifade ettiği anlam, aslında process in bütün bilgilerinin saklı olduğu, process kontrol blok diye kavramlaştırdığımız linuxtaki task struct yapısı olarak gerçekleştirilen bu veri yapısınaa erişmek için bir anahtar olarak kullnaıyor kernel bunu.
-- 
+
+## Processlerin kullanıcı ve grup ID leri
+- User ve grup Id bir process in yetki derecesini belirlemekte kullanılıyor. 
+
+1. Gerçek userID 
+2. Efektif UserID
+
+1. Gerçek GrupID
+2. Efektif GrupID
+
+
 
 
 
