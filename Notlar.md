@@ -69,6 +69,18 @@
 
 - İşletim sistemi komut satırı argümanlarının toplaytıp main fonksiyonuna parametre olarak geçiyor. 
 
+## Prosesler Arasında Altlık-Üstlük (Parent-Child) İlişkisi
+
+**Process ID değeri nedir?**
+- O process i sistemde teşhis etmek içiçn kullanılan unique tam sayısal bir değerdir.
+
+**Process ID değerini programlamada kullanacak olsam hangi tam sayı türünün içerisine sığar?**
+- Unix linux sitemlerinde sistemleri gerçekleştirenler türleri sürekli oalrak farklı aldıkları için, bunları portable arayüzü olan posix arayüzünde kullanılabilmesi için (yani kaynak kodda bir taşınabilirlik sağlaması için) bazı türler _t_ ile typedef edilmiş. 
+
+**Process ID değeri programcı için en anlam ifade ediyor?**
+- Sistem programcısı process ID değeri ile ilerideki konualr bağlamında bunun kullanmak zorunda kalıyor. Ama kernel için process ID değerinin ifade ettiği anlam, aslında process in bütün bilgilerinin saklı olduğu, process kontrol blok diye kavramlaştırdığımız linuxtaki task struct yapısı olarak gerçekleştirilen bu veri yapısınaa erişmek için bir anahtar olarak kullnaıyor kernel bunu.
+- 
+
 
 
 
