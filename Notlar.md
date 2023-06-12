@@ -112,7 +112,13 @@ ders 6 , 1.15 == şifreleme
 - **ls** Dosyları listeledik.
 - **mv ilk Desktop/** ilk isimli dosyası Desktop klasörüne taşıdık.
 - **mv dizilim documents** dizilim isimli dosyanın ismini documents ile değiştirdi.
-
+- **cp dosya dosya2** Dosya isimli dosyayı kopyaladı ve ismini dosya2 yaptı.
+- **cp -r deneme Unix/** deneme dizinini Unix dizini içerisine kopyaladık. Direkt cp komutu ile yapılamıyor, cp -r yani recursive bir şekilde dizin içerisindeki tüm dosyaların kopyalanması  gerekiyor.
+- **find / -name deneme** deneme dizinini arayıp buldu. Birkaç hata verdi bunun sebebi erişim yetkisi. Eğer sudo ile çalıştırırsak hataları vermeyecek.
+- **locate Unix** Unix dizinini aradı ve buldu.
+- **tar -cvf archive.tar dosya**  Dosya isimli dosyayı archive.tar isimli bir arşive ekledik. c create, v verbose mode, f parametresi ise arşivlenecek dosyanın ismini girmek için parametre0
+- **tar -xvf archive.tar** tar arşiv dosyasını çıkarttık.
+- 
 
 
 
