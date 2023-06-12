@@ -118,6 +118,18 @@ ders 6 , 1.15 == şifreleme
 - **locate Unix** Unix dizinini aradı ve buldu.
 - **tar -cvf archive.tar dosya**  Dosya isimli dosyayı archive.tar isimli bir arşive ekledik. c create, v verbose mode, f parametresi ise arşivlenecek dosyanın ismini girmek için parametre0
 - **tar -xvf archive.tar** tar arşiv dosyasını çıkarttık.
+- **id** Kullanıcı ID sini gördük
+- **sudo su** Terminale root olarak login yaptık.
+- **su mta2** mta 2 adlı user a terminal üzerinden geçiş yaptık.
+- **chmod u=rwx,g=rwx,o=rwx ilk** ilk isimli dosyaya user, group ve other izin yetkilerini değiştirdik. herkese rwx verdik. Herhangi birisi bu dosyayı değiştireilir. 
+- **chmod u=r,g=w,o=x ilk** Yetkileri değiştiridk.
+- **sudo adduser user2** user2 isimli bir kullanıcı oluşturduk.
+- **ps -aux** Tüm prosesleri görüntüledik. Process id leri görüntüledik
+- **service --status-all** Tüm servisleri gördük.
+- **systemctl list-units --type=service** Tüm servisleri gördük, daha detaylı bir output
+- **service network-manager stop** Network manager servisini durdurduk.
+- **service network-manager status** Network manager servisinin detaylarını gördük
+- **service network-manager start** Tekrar başlattık
 - 
 
 
