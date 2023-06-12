@@ -130,8 +130,10 @@ ders 6 , 1.15 == şifreleme
 - **service network-manager stop** Network manager servisini durdurduk.
 - **service network-manager status** Network manager servisinin detaylarını gördük
 - **service network-manager start** Tekrar başlattık
-- 
 
+## Yol ifadeleri
+
+- Windows sistemlerinde drive denilen bir kavram var. Her sürücünün kökü ayrı. Ama unix linux ve mac dünyasında drive kavramı yok. Tek bir tane kök var. Dolayısıyla windows sistemlerine removable cihaz taktıpğımızda onu farklı bir isimde görüyoruz. Ama unix linux dünyasında bir removable drive takarsak onun kökünü bir dizinin altında görürüz. Bu işleme mount işlemi deniyor. 
 
 
 
