@@ -59,10 +59,28 @@ clean:
 **Debugging ve Loglama:**
 - printk fonksiyonu, modülünüzden çıktılar yazdırmak için kullanılır. KERN_INFO, KERN_ERROR gibi farklı log seviyeleri vardır.
 
+1. dmesg komutu
+- dmesg komutu, sistem mesajlarını ve çekirdek hata ayıklama mesajlarını görüntülemek için kullanılır. Bu komut, modülünüzün yüklenmesi ve kaldırılması sırasında çekirdek tarafından kaydedilen mesajları gösterir.
 
+```
+dmesg | tail
 
+```
+2. lsmod Komutu
+- lsmod komutu, şu anda yüklenmiş olan kernel modüllerinin bir listesini gösterir. Bu komut, modülünüzün sisteme başarıyla yüklendiğini doğrulamak için kullanışlıdır. Modülünüz yüklenmişse, bu listede görünecektir. Örnek kullanım:
 
+```
+lsmod | grep modül_adınız
 
+```
+3. modinfo Komutu
+
+- modinfo komutu, belirli bir kernel modülü hakkında detaylı bilgi sağlar. Bu komut, modülün versiyonu, açıklaması, yazarı gibi bilgileri ve hangi parametreleri kabul ettiğini gösterir. Örnek kullanım:
+
+```
+modinfo modül_adınız
+
+```
 
 
 
