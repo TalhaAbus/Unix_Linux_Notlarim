@@ -5,16 +5,13 @@
 - Bilgisayarda donanım cihazlarıyla etkileşim halinde bulunmak için işletim sistemi çekirdeğinin parçası olarak çalışan yazılımlar gereklidir. Bu yazılımlara sürücüler denir.
 
 
-Elbette, kernel modül programlama hakkında bilgi vererek başlayabiliriz. Kernel modülleri, işletim sisteminin çekirdeği olan Linux kernel'ine dinamik olarak yüklenip çıkarılabilen parçalardır. Bu modüller genellikle donanım sürücüleri, dosya sistemleri veya sistem hizmetleri gibi özellikler sağlar. Basit bir kernel modülü yazarak, kernel programlama ve sürücü geliştirme konularında pratik yapabilirsiniz.
+**Basit Bir Kernel Modülü Yazmak**
 
-Basit Bir Kernel Modülü Yazmak
-Geliştirme Ortamını Hazırlama:
-Linux işletim sistemi kurulu bir makine gereklidir. Ubuntu gibi bir dağıtımı kullanabilirsiniz.
-Gerekli araçlar ve kütüphaneleri kurun. Bu genellikle build-essential, linux-headers (sisteminizin kernel versiyonuna uygun olanı) ve make içerir.
-Kernel Modülü Kodu Yazma:
-Bir kernel modülü, genellikle iki temel fonksiyon içerir: init_module ve cleanup_module. Bunlar modül yüklendiğinde ve kaldırıldığında çağrılır.
+**Kernel Modülü Kodu Yazma:**
 
-Örnek bir kernel modülü:
+Bir kernel modülü, genellikle iki temel fonksiyon içerir: **init_module** ve **cleanup_module**. Bunlar modül yüklendiğinde ve kaldırıldığında çağrılır.
+
+**Örnek bir kernel modülü:**
 
 ```C
 #include <linux/module.h>  // Bu, kernel modülü için temel kütüphanedir
@@ -37,10 +34,10 @@ MODULE_DESCRIPTION("Basit bir örnek modül");
 
 ```
 
- Makefile Oluşturma:
+**Makefile Oluşturma:**
 Kernel modülünüzü derlemek için bir Makefile oluşturmanız gerekiyor. Bu, derleme sürecini otomatikleştiren bir scripttir.
 
-Örnek bir Makefile:
+**Örnek bir Makefile:**
 
 
 ```
@@ -53,13 +50,14 @@ clean:
     make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 
 ```
-Modülü Derleme ve Test Etme:
-Terminalde make komutunu çalıştırarak modülünüzü derleyin.
-Derlenmiş modülü yüklemek için sudo insmod modul_adi.ko kullanın.
-Modülü kaldırmak için sudo rmmod modul_adi kullanın.
-dmesg komutu ile kernel loglarını kontrol ederek modülünüzün çıktılarını görebilirsiniz.
-Debugging ve Loglama:
-printk fonksiyonu, modülünüzden çıktılar yazdırmak için kullanılır. KERN_INFO, KERN_ERROR gibi farklı log seviyeleri vardır.
+**Modülü Derleme ve Test Etme:**
+
+- Terminalde make komutunu çalıştırarak modülünüzü derleyin.
+- Derlenmiş modülü yüklemek için sudo insmod modul_adi.ko kullanın.
+- Modülü kaldırmak için sudo rmmod modul_adi kullanın.
+- dmesg komutu ile kernel loglarını kontrol ederek modülünüzün çıktılarını görebilirsiniz.
+**Debugging ve Loglama:**
+- printk fonksiyonu, modülünüzden çıktılar yazdırmak için kullanılır. KERN_INFO, KERN_ERROR gibi farklı log seviyeleri vardır.
 
 
 
