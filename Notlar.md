@@ -168,9 +168,7 @@ Eğer mevcut dizininiz /home/kullanici/dokumanlar ise ve rapor.txt dosyasına ul
 rapor.txt
 ./rapor.txt (aktif dizini gösterir)
 Eğer bir üst dizinden muzik dizinine girmek istiyorsanız:
-```
 
-```
 ../muzik
 Relative path'lerin kullanımı, özellikle dosya yapıları taşınabilir veya çalışma dizininiz sık değiştiğinde yararlıdır.
 ```
