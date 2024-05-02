@@ -173,7 +173,23 @@ Eğer bir üst dizinden muzik dizinine girmek istiyorsanız:
 Relative path'lerin kullanımı, özellikle dosya yapıları taşınabilir veya çalışma dizininiz sık değiştiğinde yararlıdır.
 ```
 
+**1. /bin**
+- Bu dizin, sistemdeki tüm kullanıcıların ihtiyaç duyabileceği temel kullanıcı komutlarını içerir. Örneğin, ls, cp, mv, cat gibi temel shell komutları bu dizinde bulunur. Bu komutlar, kullanıcıların sistemi yönetmesine ve dosyalarla çalışmasına olanak tanır.
 
+**2. /boot**
+- Bu dizin, sistemin başlangıç (boot) işlemi için gerekli dosyaları içerir. Özellikle, Linux çekirdeği (vmlinuz), başlangıç yükleyicisi (grub veya LILO) ve başlatma sırasında kullanılan diğer dosyalar burada saklanır.
+
+**3. /dev**
+- Bu dizin, tüm cihaz dosyalarını barındırır. Linux'ta cihazlar dosya olarak temsil edilir; örneğin, sabit diskler (/dev/sda), USB aygıtlar (/dev/sdb), ses aygıtları (/dev/audio, /dev/sound, vb.) gibi.
+
+**4. /etc**
+- Sistem genelindeki yapılandırma dosyaları bu dizinde saklanır. Bu dosyalar, çeşitli programların, daemon'ların (arka planda çalışan servislerin) ve diğer sistem ayarlarının yapılandırılmasını içerir. Örneğin, ağ yapılandırmaları (/etc/network), kullanıcı hesap bilgileri (/etc/passwd) ve başlangıç script'leri burada bulunur.
+
+**5. /home**
+- Sistemdeki her kullanıcı için bir ana dizin bulunur ve genellikle bu dizin /home altında yer alır. Örneğin, kullanici adlı bir kullanıcının kişisel dosyaları, belgeleri, indirilenler, masaüstü ayarları vb. /home/kullanici dizininde saklanır.
+
+**6. /lib**
+- Bu dizin, sistemdeki temel kütüphaneleri ve çekirdek modüllerini içerir. Özellikle, sistemdeki uygulamaların çalışması için gerekli olan dinamik kütüphaneler (*.so dosyaları) ve çekirdek modülleri (*.ko dosyaları) bu dizinde bulunur.
 
 
 
