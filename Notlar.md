@@ -135,12 +135,45 @@ ders 6 , 1.15 == şifreleme
 
 - Windows sistemlerinde drive denilen bir kavram var. Her sürücünün kökü ayrı. Ama unix linux ve mac dünyasında drive kavramı yok. Tek bir tane kök var. Dolayısıyla windows sistemlerine removable cihaz taktıpğımızda onu farklı bir isimde görüyoruz. Ama unix linux dünyasında bir removable drive takarsak onun kökünü bir dizinin altında görürüz. Bu işleme mount işlemi deniyor. 
 
+# Pipe
 
+- Linux ve Unix benzeri sistemlerde "pipes" (borular), bir komutun çıktısını başka bir komutun girdisi olarak ileten bir araçtır. Bu, komutları birbirine bağlayarak onların çıktılarını bir dizi işlemle kullanılabilir hale getirir. Bu özellik, Linux'un güçlü komut satırı işleme yeteneklerinin temelini oluşturur ve genellikle "pipeline" (boru hattı) olarak adlandırılan işlemler zinciri oluşturmak için kullanılır.
 
+**Pipes Kullanımı**
+- Bir pipe, dikey çubuk (|) simgesi ile gösterilir. Temel kullanımı, bir komutun standart çıktısını (STDOUT) alıp diğer bir komutun standart girişine (STDIN) yönlendirmektir. Bu yönlendirme ile, birden fazla komut tek bir işlem hattı olarak birleştirilebilir.
+```
+ls | sort | less
 
+```
+# Path 
 
+- Bilgisayar sistemlerinde "path" (yol), bir dosya veya dizinin sistem üzerindeki konumunu ifade eden bir dizi karakterdir. Path, işletim sisteminin dosyaları ve dizinleri nasıl organize ettiğini ve nerede sakladığını belirlemek için kullanılır. Path'ler, "absolute" (mutlak) veya "relative" (göreceli) olabilir.
 
+**Absolute Path (Mutlak Yol)**
+Absolute path, dosya sisteminin kök dizininden (root) başlayarak belirli bir dosya veya dizine kadar olan tam yolu ifade eder. Bu yol, dosyanın veya dizinin sistem üzerindeki kesin konumunu tanımlar ve genellikle kök dizin işaretiyle (/ Linux/Unix için, C:\ Windows için) başlar.
 
+**Örnekler:**
+
+- Linux/Unix için: /home/kullanici/dokumanlar/rapor.txt
+- Windows için: C:\Users\kullanici\Documents\report.txt
+- Absolute path'ler bağlamdan bağımsızdır; yani sistemde nerede olursanız olun, aynı konumu gösterir.
+
+**Relative Path (Göreceli Yol)**
+- Relative path, mevcut çalışma dizinine göre belirtilen bir dosya veya dizine giden yolu ifade eder. Göreceli yollar, genellikle . (aktif dizin) veya .. (bir üst dizin) ile başlar.
+
+**Örnek**
+Eğer mevcut dizininiz /home/kullanici/dokumanlar ise ve rapor.txt dosyasına ulaşmak istiyorsanız, relative path şu şekilde olabilir:
+
+```
+rapor.txt
+./rapor.txt (aktif dizini gösterir)
+Eğer bir üst dizinden muzik dizinine girmek istiyorsanız:
+```
+
+```
+../muzik
+Relative path'lerin kullanımı, özellikle dosya yapıları taşınabilir veya çalışma dizininiz sık değiştiğinde yararlıdır.
+```
 
 
 
