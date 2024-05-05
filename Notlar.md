@@ -191,9 +191,13 @@ Relative path'lerin kullanımı, özellikle dosya yapıları taşınabilir veya 
 **6. /lib**
 - Bu dizin, sistemdeki temel kütüphaneleri ve çekirdek modüllerini içerir. Özellikle, sistemdeki uygulamaların çalışması için gerekli olan dinamik kütüphaneler (*.so dosyaları) ve çekirdek modülleri (*.ko dosyaları) bu dizinde bulunur.
 
+# more
 
+```
+more dosyaadi.txt
 
-
+```
+> Bu komut, dosyaadi.txt adlı dosyanın içeriğini sayfa sayfa gösterir. İçeriği gördükten sonra, daha fazla içeriği görmek için Enter tuşuna basabilir veya boşluk çubuğuna basarak bir sonraki sayfaya geçebilirsiniz.
 
 
 
