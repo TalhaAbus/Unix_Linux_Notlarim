@@ -199,13 +199,23 @@ more dosyaadi.txt
 ```
 > Bu komut, dosyaadi.txt adlı dosyanın içeriğini sayfa sayfa gösterir. İçeriği gördükten sonra, daha fazla içeriği görmek için Enter tuşuna basabilir veya boşluk çubuğuna basarak bir sonraki sayfaya geçebilirsiniz.
 
+# head ve tail 
 
+- Linux'ta head ve tail komutları, dosyaların içeriğini belirli bir sayıda satır olarak göstermek için kullanılır. Bu komutlar, büyük dosyalarla çalışırken veya log dosyalarını incelemek gibi senaryolarda oldukça yararlıdır.
 
+- head komutu, bir dosyanın başından belirtilen sayıda satırı gösterir. Eğer bir satır sayısı belirtilmezse, varsayılan olarak ilk 10 satırı gösterir.
 
+```
+head -n 20 dosyaadi.txt
 
+```
 
+- tail komutu, bir dosyanın sonundan belirtilen sayıda satırı gösterir. Varsayılan olarak son 10 satırı gösterir ve sıkça log dosyalarını canlı olarak izlemek için kullanılır.
 
+```
+tail -n 20 dosyaadi.txt
 
+```
 
 
 
